@@ -51,7 +51,7 @@ public class Animal {
 
     public boolean imDead() {
         if (weight <= 0.0) {
-            System.out.println("Your dog is dead");
+            System.out.println("Your animal is dead");
             return false;
         } else {
             return true;
