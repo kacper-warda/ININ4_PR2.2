@@ -12,4 +12,9 @@ public class Car extends Device {
         this.value = 20000.0;
     }
 
+    @Override
+    void turnOn() {
+        System.out.println("engine is on");
+    }
+
 }

@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Device {
+public abstract class Device {
     final public String mark;
     final public String model;
     final public Integer yearOfProduction;
@@ -16,4 +16,6 @@ public class Device {
     public String toString() {
         return mark + " " + model + " " + yearOfProduction;
     }
+
+    abstract void turnOn();
 }

@@ -3,7 +3,7 @@ package com.company.creatures;
 import java.io.File;
 import java.sql.SQLOutput;
 
-public class Animal {
+public class Animal implements Edible {
     public final String species;
     protected Double weight;
     public String name;
@@ -61,6 +61,16 @@ public class Animal {
 
     public String toString() {
         return this.species + " " + this.name;
+    }
+
+    @Override
+    public void beEaten() throws Exception {
+        if (this instanceof Human) {
+            throw new Exception("no way you cannibal!!!!!!!!11!1!");
+        } else {
+            System.out.println("adioooooooooooooos");
+            this.weight = 0.0;
+        }
     }
 }
 
