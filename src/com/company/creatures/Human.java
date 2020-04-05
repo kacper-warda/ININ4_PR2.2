@@ -6,16 +6,18 @@ import com.company.devices.Phone;
 public class Human extends Animal {
     public String firstName;
     public String lastName;
-    protected Phone phone;
+    public Phone phone;
     public Animal pet;
     private Car car;
     private Double salary;
+    public Double cash;
 
     public final static Double DEFAULT_HUMAN_WEIGHT = 70.0;
 
     public Human() {
         super("homo sapiens");
         this.weight = DEFAULT_HUMAN_WEIGHT;
+        this.cash = 1000.0;
     }
 
 
@@ -33,15 +35,15 @@ public class Human extends Animal {
     }
 
     public void setCar(Car car) {
-        if (this.salary > car.value) {
-            System.out.println("you bought is by cash");
-            this.car = car;
-        } else if (this.salary >= car.value / 12) {
-            System.out.println("you bought it on credit");
-            this.car = car;
-        } else {
-            System.out.println("sorry, first ask for a rise");
-        }
+//        if (this.salary > car.value) {
+//            System.out.println("you bought is by cash");
+        this.car = car;
+//        } else if (this.salary >= car.value / 12) {
+//            System.out.println("you bought it on credit");
+//            this.car = car;
+//        } else {
+//            System.out.println("sorry, first ask for a rise");
+//        }
     }
 
     public String toString() {

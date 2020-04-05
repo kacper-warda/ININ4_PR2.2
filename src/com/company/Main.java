@@ -45,9 +45,17 @@ public class Main {
 
         me.pet.beEaten();
 
-        me.getCar().sell();
-        me.pet.sell();
-        me.sell();
+        Human brotherInLow = new Human();
+        brotherInLow.setSalary(1000.0);
+        brotherInLow.firstName = "Mateusz";
+        brotherInLow.lastName = "Skiba";
+
+        passat.sell(me, brotherInLow, 999.0);
+
+        System.out.println(me.getCar());
+        System.out.println(me.cash);
+        System.out.println(brotherInLow.getCar());
+        System.out.println(brotherInLow.cash);
 
     }
 }
