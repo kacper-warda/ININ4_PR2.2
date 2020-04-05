@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 
 public class Animal {
     public final String species;
-    private Double weight;
+    protected Double weight;
     public String name;
     File pic;
 
