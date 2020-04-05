@@ -47,4 +47,8 @@ public class Human extends Animal {
     public String toString() {
         return this.firstName + " " + this.lastName;
     }
+
+    public void sell() throws Exception {
+        throw new Exception("no way");
+    }
 }

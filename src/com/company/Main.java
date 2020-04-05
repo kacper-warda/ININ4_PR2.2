@@ -3,8 +3,6 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
-import com.company.devices.Device;
-import com.company.devices.Phone;
 
 public class Main {
 
@@ -46,9 +44,10 @@ public class Main {
         me.feed();
 
         me.pet.beEaten();
-        me.beEaten();
 
-        System.out.println("trtawerawerawrawer");
+        me.getCar().sell();
+        me.pet.sell();
+        me.sell();
 
     }
 }

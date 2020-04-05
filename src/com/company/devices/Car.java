@@ -16,5 +16,4 @@ public class Car extends Device {
     void turnOn() {
         System.out.println("engine is on");
     }
-
 }

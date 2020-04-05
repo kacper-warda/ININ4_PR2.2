@@ -1,9 +1,10 @@
 package com.company.creatures;
 
-import java.io.File;
-import java.sql.SQLOutput;
+import com.company.Saleable;
 
-public class Animal implements Edible {
+import java.io.File;
+
+public class Animal implements Edible, Saleable {
     public final String species;
     protected Double weight;
     public String name;
@@ -71,6 +72,11 @@ public class Animal implements Edible {
             System.out.println("adioooooooooooooos");
             this.weight = 0.0;
         }
+    }
+
+    @Override
+    public void sell() throws Exception {
+        System.out.println("you bastard you left me right now");
     }
 }
 
