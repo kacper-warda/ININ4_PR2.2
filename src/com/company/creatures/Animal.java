@@ -4,9 +4,9 @@ import com.company.Saleable;
 
 import java.io.File;
 
-public class Animal implements Edible, Saleable {
+public class Animal implements Edible, Saleable, Comparable<Animal> {
     public final String species;
-    protected Double weight;
+    public Double weight;
     public String name;
     File pic;
 
@@ -76,21 +76,22 @@ public class Animal implements Edible, Saleable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) throws Exception {
-        if (this instanceof Human) {
-            throw new Exception("no way");
-        } else {
-            if (buyer.cash >= price) {
-                seller.cash += price;
-                buyer.cash -= price;
-                buyer.pet = this;
-                if (seller.pet == this) {
-                    seller.pet = null;
-                }
-                System.out.println(buyer.firstName + " bought " + this.toString() + " from " + seller.firstName + " for " + price);
-            } else {
-                throw new Exception("sorry, you have not enough money");
+        if (buyer.cash >= price) {
+            seller.cash += price;
+            buyer.cash -= price;
+            buyer.pet = this;
+            if (seller.pet == this) {
+                seller.pet = null;
             }
+            System.out.println(buyer.firstName + " bought " + this.toString() + " from " + seller.firstName + " for " + price);
+        } else {
+            throw new Exception("sorry, you have not enough money");
         }
+    }
+
+    @Override
+    public int compareTo(Animal otherAnimal) {
+        return this.species.compareTo(otherAnimal.species);
     }
 }
 
